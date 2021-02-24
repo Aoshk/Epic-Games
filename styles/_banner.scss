@@ -1,0 +1,23 @@
+.banner {
+    position: relative;
+    
+
+    &__content {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        justify-items: center;
+
+        &Title {
+            margin-bottom: 1em;
+        }
+
+        &text {
+            text-align: center;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,10 @@
+.banner {
+  position: relative;
+  display: inline-block;
+}
+
+.banner__title {
+  position: absolute;
+  top: 10px;
+}
+/*# sourceMappingURL=banner.css.map */
