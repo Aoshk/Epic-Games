@@ -1,23 +1,34 @@
 .banner {
-    position: relative;
-    
+
+    background-image: url("https://generacionxbox.com/wp-content/uploads/2020/11/Hutman-3.jpg");
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    height:100vh;
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
     &__content {
-        position: absolute;
-        top: 20%;
-        left: 10%;
+    
         justify-items: center;
 
         &Title {
             margin-bottom: 1em;
         }
 
-        &text {
+        &Text {
             text-align: center;
+            max-width: 500px;
         }
     }
+    .bannerImage{
 
-    img {
-        width: 100%;
+        img {
+            width: 100%;
+        }
+
     }
+    
 }

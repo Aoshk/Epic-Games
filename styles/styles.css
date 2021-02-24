@@ -64,13 +64,24 @@ nav .logo {
 }
 
 .banner {
-  position: relative;
+  background-image: url("https://generacionxbox.com/wp-content/uploads/2020/11/Hutman-3.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .banner__content {
-  position: absolute;
-  top: 20%;
-  left: 10%;
   justify-items: center;
 }
 
@@ -78,15 +89,17 @@ nav .logo {
   margin-bottom: 1em;
 }
 
-.banner__contenttext {
+.banner__contentText {
   text-align: center;
+  max-width: 500px;
 }
 
-.banner img {
+.banner .bannerImage img {
   width: 100%;
 }
 
 .features {
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,15 +136,27 @@ nav .logo {
 }
 
 .newsletter {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
+  width: 100%;
 }
 
 .newsletter__input {
   width: 40%;
+}
+
+footer {
+  width: 100%;
+}
+
+footer .socialFooter .socialImages {
+  width: 26px;
+}
+
+footer .socialFooter .socialImages img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
