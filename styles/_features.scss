@@ -1,7 +1,6 @@
 .features {
     margin-top:40px;
     display: flex;
-    justify-content:space-around;
     width: 100%;
 
     &__container {
@@ -20,11 +19,11 @@
 
         align-items: center;
         flex-direction: column;
+
         &__container{
 
             width:80%;
-            
-            
+           
         }
     }
 }
