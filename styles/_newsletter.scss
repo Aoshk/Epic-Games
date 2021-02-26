@@ -1,11 +1,29 @@
-.newsletter{
-    margin-top:30px;
-    display:flex;
-    justify-items:center;
-    width:100%;
+.newsletter {
+    margin-top: 30px;
+    display: flex;
+    justify-items: center;
+    
+    
 
-    &__input{
+    &__input {
 
-        width:40%;
+        width: 30%;
+        padding:10px;
+        border-radius: 10px;
+        margin-right: 10px;
+        background-color:transparent;
+        color:black;
+        align-self: center;
+           
+        
+    }
+
+    button{
+
+        background-color:#FF000E;
+        border-radius: 5px;
+        padding:1px;
+        width: 200px;
+        
     }
 }
