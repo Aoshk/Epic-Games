@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     color: white;
@@ -17,6 +16,15 @@ nav {
     height: 10vh;
     padding: 20px;
     background-color: black;
+
+    .imgMenuMobile {
+
+        display:none;
+    }
+    .divMenuMobile{
+
+        display: none;
+    }
 }
 
 .nav__links {
@@ -31,15 +39,50 @@ nav {
     }
 }
 
+//responsive movil
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    .nav__links {
-        flex-direction: column;
-    }
 
-    .logo {
-        display: inline;
+nav {
+
+    
+
+    .imgMenuMobile {
+
+        display:block;
     }
+   
+    .nav__links{
+
+        display: none;
+        &--mobile{
+
+            display:flex;
+            flex-direction:column;
+            margin-top: 20px;
+            align-self: center;
+            padding-inline-start: 0px;
+         
+        }
+        
+        li{
+
+            margin: 10px 0px;
+
+        }
+    }
+    .divMenuMobile{
+
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        padding:20px;
+        top: 0px;
+        right: 0px;
+        width: 40%;
+        height:100vh;
+        background-color: gray;
+    }
+}
+ 
 }

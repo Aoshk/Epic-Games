@@ -35,6 +35,14 @@ nav {
   background-color: black;
 }
 
+nav .imgMenuMobile {
+  display: none;
+}
+
+nav .divMenuMobile {
+  display: none;
+}
+
 .nav__links {
   list-style: none;
   display: -webkit-box;
@@ -51,20 +59,45 @@ nav {
 }
 
 @media (max-width: 768px) {
-  nav {
+  nav .imgMenuMobile {
+    display: block;
+  }
+  nav .nav__links {
+    display: none;
+  }
+  nav .nav__links--mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 20px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-padding-start: 0px;
+            padding-inline-start: 0px;
   }
-  .nav__links {
+  nav .nav__links li {
+    margin: 10px 0px;
+  }
+  nav .divMenuMobile {
+    position: absolute;
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .logo {
-    display: inline;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 20px;
+    top: 0px;
+    right: 0px;
+    width: 40%;
+    height: 100vh;
+    background-color: gray;
   }
 }
 
