@@ -1,15 +1,46 @@
-footer{
+footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 20px;
+    justify-content: space-between;
 
-    width: 100%;
-
-    .socialFooter{
-
-        .socialImages{
-            
+    ul {
+        list-style: none;
+    }
+    li {
+        display: column;
+    }
+    .socialFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: auto;
+        margin-left: 50px;
+        h1 {
+            margin: 10px;
+        }
+        .socialImagesContainer {
+            display: flex;
+        }
+        .socialImages {
             width: 26px;
-            img{
-
+            img {
                 width: 100%;
+            }
+        }
+    }
+    .politicas {
+        display: flex;
+        align-items: center;
+        ul {
+            display: flex;
+
+            align-content: center;
+
+            li {
+                margin: 10px;
             }
         }
     }

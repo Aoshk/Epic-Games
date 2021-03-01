@@ -1,29 +1,35 @@
 .features {
-    margin-top:40px;
+    margin-top: 20px;
     display: flex;
     width: 100%;
+    align-items: center;
 
     &__container {
         background-color: aqua;
         width: 20%;
-        height:300px;
+        height: 300px;
         margin: 10px;
         flex-grow: 1;
-        padding: 2em;
+        padding: 1em;
         background-color: #080735;
+
+        h2{
+
+            font-weight: bold;
+            font-family:$Poppins;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
     }
 }
-@media (max-width: 768px){
-    
-    .features{
-
+@media (max-width: 768px) {
+    .features {
         align-items: center;
         flex-direction: column;
 
-        &__container{
-
-            width:80%;
-           
+        &__container {
+            width: 80%;
         }
     }
 }

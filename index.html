@@ -4,19 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <title>Home</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="BeerSlider.css">
+    <script src="BeerSlider.js"></script>
+    <script src="script.js"></script>
+
 </head>
 
 <body>
     <header>
         <nav>
 
-            
+
             <div class="divMenuMobile">
 
-                <img class="closeMenu"src="./data/close-menu-mobile.svg" alt="close menu">
+                <img class="closeMenu" src="./data/close-menu-mobile.svg" alt="close menu">
 
                 <ul class="nav__links nav__links--mobile">
                     <li><a href="#">Tienda</a></li>
@@ -43,16 +48,17 @@
 
     <div class="banner">
 
-      
+
         <div class="banner__content">
 
             <h2 class="banner__contentTitle">LA MUERTE ESPERA</h2>
-            <p class="banner__contentText">HITMAN 3 es la dramática conclusión de la trilogía World of Assassination. El Agente
+            <p class="banner__contentText">HITMAN 3 es la dramática conclusión de la trilogía World of Assassination. El
+                Agente
                 47
                 regresa como un profesional despiadado por los contratos más importantes de toda su vida profesional.
             </p>
 
-            <button class="cta">COMPRAR</button>
+            <button class="banner__cta">COMPRAR</button>
         </div>
 
 
@@ -60,22 +66,32 @@
     </div>
     <main>
 
+        <section class="hitmanSlider">
+
+            <div id="slider" class="beer-slider" >
+                <img src="https://images.gamewatcherstatic.com/image/file/1/16/75171/hitman1.jpg" >
+                <div class="beer-reveal">
+                  <img src="https://i.redd.it/mnfvnwoizc551.jpg" >
+                </div>
+              </div>
+
+
+        </section>
         <section class="features">
 
             <div class="features__container">
                 <h2>Accede a titulos exclusivos</h2>
-                <p>Se el primero en <br> probar los mejores<br> juegos AAA e indies de forma exclusiva<br> en la Epic
-                    Store</p>
-            </div>
-
-            <div class="features__container">
-                <h2>Accede a titulos exclusivos</h2>
                 <p>Se el primero en probar los mejores juegos AAA e indies de forma exclusiva en la Epic Store</p>
             </div>
 
             <div class="features__container">
-                <h2>Accede a titulos exclusivos</h2>
-                <p>Se el primero en probar los mejores juegos AAA e indies de forma exclusiva en la Epic Store</p>
+                <h2>Grandes descuentos</h2>
+                <p>Consigue tus juegos favoritos a los mejores precios del mercado</p>
+            </div>
+
+            <div class="features__container">
+                <h2>Juegos gratis</h2>
+                <p>Disfruta de titulos completamente gratis semanalmente,seran tuyos por siempre</p>
             </div>
 
         </section>
@@ -102,29 +118,30 @@
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
 
         <img src="./data/epic-games logo 1.svg">
 
         <div class="socialFooter">
             <h1>Social</h1>
 
-            <div class="socialImages">
+            <div class="socialImagesContainer">
 
-                <img src="https://i.pinimg.com/originals/28/90/ba/2890bac9ba41e52707f36268231dfe9e.png" alt="">
+                <div class="socialImages">
+
+                    <img src="https://i.pinimg.com/originals/28/90/ba/2890bac9ba41e52707f36268231dfe9e.png" alt="">
+                </div>
+                <div class="socialImages">
+
+                    <img src="https://i.pinimg.com/originals/28/90/ba/2890bac9ba41e52707f36268231dfe9e.png" alt="">
+                </div>
+
+                <div class="socialImages">
+
+                    <img src="https://i.pinimg.com/originals/28/90/ba/2890bac9ba41e52707f36268231dfe9e.png" alt="">
+                </div>
+
             </div>
-            <div class="socialImages">
-
-                <img src="https://i.pinimg.com/originals/28/90/ba/2890bac9ba41e52707f36268231dfe9e.png" alt="">
-            </div>
-
-            <div class="socialImages">
-
-                <img src="https://i.pinimg.com/originals/28/90/ba/2890bac9ba41e52707f36268231dfe9e.png" alt="">
-            </div>
-
-
-
 
         </div>
 
@@ -136,14 +153,14 @@
             </ul>
 
         </div>
-        <p>© 2021, Epic Games, Inc. Todos los derechos reservados. Epic, Epic Games, el logotipo de Epic Games,
-            Fortnite, el logotipo de Fortnite, Unreal, Unreal Engine, el logotipo de Unreal Engine, Unreal Tournament y
-            el logotipo de Unreal Tournament son marcas comerciales o marcas registradas de Epic Games, Inc. tanto en
-            Estados Unidos de América como en el resto del mundo. Otras marcas o nombres de productos son marcas
-            comerciales de sus respectivos propietarios. Las transacciones fuera de EE. UU. se realizan a través de Epic
-            Games International, S.à r.l.</p>
 
-    </footer>
+
+    </footer> -->
+
+    <script>
+        new BeerSlider(document.getElementById('slider'));
+
+    </script>
 </body>
 
 </html>

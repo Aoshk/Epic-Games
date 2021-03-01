@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 button {
-  width: 280px;
-  height: 72px;
-  background: #FF000E;
+  width: 140px;
+  height: 50px;
+  background: #ff000e;
   border-radius: 8px;
   color: white;
 }
@@ -17,6 +19,7 @@ body {
   width: 100%;
   padding: 0px;
   margin: 0px;
+  background-color: #1B1924;
 }
 
 nav {
@@ -59,6 +62,9 @@ nav .divMenuMobile {
 }
 
 @media (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
   nav .imgMenuMobile {
     display: block;
   }
@@ -118,8 +124,18 @@ nav .divMenuMobile {
 }
 
 .banner__content {
-  justify-items: center;
   padding: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .banner__contentTitle {
@@ -128,13 +144,24 @@ nav .divMenuMobile {
   font-family: "Fugaz One", cursive;
   font-size: 48px;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  margin: 5px;
 }
 
 .banner__contentText {
   text-align: center;
   max-width: 500px;
   text-shadow: 0px 0px 50px #000000;
+  font-family: "Nunito Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.banner__content .banner__cta {
+  margin-top: 20px;
+  outline: none;
+  border: none;
 }
 
 .banner .bannerImage img {
@@ -143,19 +170,42 @@ nav .divMenuMobile {
 
 @media (max-width: 768px) {
   .banner {
-    background-position-x: -190px;
+    background-image: url("../data/banner-mobile.jpg");
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .banner__content {
     padding: 0px;
+    margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30%;
   }
 }
 
+.hitmanSlider {
+  width: 100%;
+  padding: 2%;
+}
+
+.hitmanSlider img {
+  width: 100%;
+}
+
 .features {
-  margin-top: 40px;
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .features__container {
@@ -166,8 +216,15 @@ nav .divMenuMobile {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 2em;
+  padding: 1em;
   background-color: #080735;
+}
+
+.features__container h2 {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -199,7 +256,52 @@ nav .divMenuMobile {
 }
 
 footer {
-  width: 100%;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: black;
+  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  display: column;
+}
+
+footer .socialFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  margin-left: 50px;
+}
+
+footer .socialFooter h1 {
+  margin: 10px;
+}
+
+footer .socialFooter .socialImagesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer .socialFooter .socialImages {
@@ -208,5 +310,26 @@ footer .socialFooter .socialImages {
 
 footer .socialFooter .socialImages img {
   width: 100%;
+}
+
+footer .politicas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .politicas ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer .politicas ul li {
+  margin: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
