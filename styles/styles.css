@@ -189,12 +189,17 @@ nav .divMenuMobile {
 }
 
 .hitmanSlider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  padding: 2%;
-}
-
-.hitmanSlider img {
-  width: 100%;
+  padding: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .features {
@@ -256,19 +261,29 @@ nav .divMenuMobile {
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   background-color: black;
   padding: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+footer .footerlogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footerlogo img {
+  width: 80px;
+  height: 60px;
 }
 
 footer ul {
@@ -277,6 +292,10 @@ footer ul {
 
 footer li {
   display: column;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 footer .socialFooter {
@@ -290,12 +309,17 @@ footer .socialFooter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: auto;
-  margin-left: 50px;
+  margin-left: 5%;
 }
 
 footer .socialFooter h1 {
   margin: 10px;
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 footer .socialFooter .socialImagesContainer {
@@ -306,10 +330,16 @@ footer .socialFooter .socialImagesContainer {
 
 footer .socialFooter .socialImages {
   width: 26px;
+  margin: 5px;
 }
 
 footer .socialFooter .socialImages img {
   width: 100%;
+}
+
+footer .socialFooter .socialtwitter {
+  width: 19px;
+  margin-top: 10%;
 }
 
 footer .politicas {
@@ -319,6 +349,9 @@ footer .politicas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .politicas ul {
@@ -331,5 +364,38 @@ footer .politicas ul {
 
 footer .politicas ul li {
   margin: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+footer .infoLegal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .politicas ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px;
+  }
+  .politicas ul li {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
