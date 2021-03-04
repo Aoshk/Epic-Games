@@ -2,8 +2,8 @@ footer {
     width: 100%;
     display: flex;
     background-color: black;
-    padding: 20px;
     justify-content: space-between;
+    padding: 10px;
 
     .footerlogo {
         display: flex;
@@ -76,18 +76,15 @@ footer {
     footer {
         padding: 0px;
         display: flex;
-      
     }
     .politicas {
         ul {
             flex-direction: column;
             padding: 0px;
 
-            li{
-
+            li {
                 text-align: center;
             }
         }
-        
     }
 }

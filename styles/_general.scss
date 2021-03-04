@@ -2,11 +2,16 @@
     box-sizing: border-box;
     color: white;
 }
+h3{
+    font-family: $Poppins;
+    font-size:14px;
+}
 body {
     width: 100%;
     padding: 0px;
     margin: 0px;
     background-color:#1B1924;
+    height: 100%;
 }
 
 nav {
@@ -39,7 +44,10 @@ nav {
         }
     }
 }
+p{
 
+    font-family: $Nunito;
+}
 //responsive movil
 @media (max-width: 768px) {
 

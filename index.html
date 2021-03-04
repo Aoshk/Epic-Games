@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="BeerSlider.css">
     <script src="BeerSlider.js"></script>
-    <script src="script.js"></script>
-
 </head>
 
 <body>
@@ -69,14 +67,41 @@
         <section class="hitmanSlider">
 
             <div id="slider" class="beer-slider">
-                <img src="https://images.gamewatcherstatic.com/image/file/1/16/75171/hitman1.jpg">
+                <img src="./data/slider-1.png">
                 <div class="beer-reveal">
-                    <img src="https://i.redd.it/mnfvnwoizc551.jpg">
+                    <img src="./data/slider-2.png">
                 </div>
             </div>
 
 
         </section>
+        
+        <section class="hitman">
+
+            <div class="hitman__Banner">
+                <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/01/12/16104474851076.jpg" alt="">
+            </div>
+
+            <div class="hitman__ImagesContainer">
+
+                <div class="hitman__Images">
+
+                    <img src="https://cdn2.unrealengine.com/egs-hitman3-iointeractiveas-g1a-00-1920x1080-604023665.jpg"
+                        alt="">
+                </div>
+                <div class="hitman__Images">
+                    <img src="https://hitman.com/cms/assets/uploads/play_your_way.jpg"
+                        alt="">
+
+                </div>
+                <div class="hitman__Images">
+                    <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/01/12/16104474851076.jpg"
+                        alt="">
+
+                </div>
+            </div>
+        </section>
+
         <section class="features">
 
             <div class="features__container">
@@ -98,29 +123,30 @@
 
         <section class="newsletter">
 
-            <h4>Te mantendremos informado de las ùltimas promociones y juegos gratuitos</h4>
+            <h3>Te mantendremos informado de las ùltimas promociones y juegos gratuitos</h3>
 
-            <input type="text" class="newsletter__input" placeholder="Correo electrónico">
-            <button>Suscribirse</button>
+            <div class="newsletter__InputsContainer">
+
+                <input type="email" class="newsletter__input" placeholder="Correo electrónico">
+
+                <button class="newsletter__btn">Suscribirse</button>
+
+            </div>
 
         </section>
 
-        <section class="hitman">
-            <h1>Aqui iria la seccion de hitman</h1>
-        </section>
-
-        <section class="suggestedOffers">
+        <!--<section class="suggestedOffers">
             <h1> Ofertas recomendadas</h1>
 
             <div></div>
             <div></div>
             <div></div>
-        </section>
+        </section> -->
     </main>
 
     <footer>
 
-        
+
         <div class="footerlogo">
             <img src="./data/epic-games logo 1.svg">
         </div>
@@ -157,13 +183,13 @@
             </ul>
 
         </div>
-
-        <!-- <div class="infoLegal">
+    </footer>
+    <!-- <div class="infoLegal">
            <p>
             © 2021, Epic Games, Inc. Todos los derechos reservados. Epic, Epic Games, el logotipo de Epic Games, Fortnite, el logotipo de Fortnite, Unreal, Unreal Engine, el logotipo de Unreal Engine, Unreal Tournament y el logotipo de Unreal Tournament son marcas comerciales o marcas registradas de Epic Games, Inc. tanto en Estados Unidos de América como en el resto del mundo. Otras marcas o nombres de productos son marcas comerciales de sus respectivos propietarios. Las transacciones fuera de EE. UU. se realizan a través de Epic Games International, S.à r.l.
            </p>
        </div> -->
-    </footer>
+
 
     <script>
         new BeerSlider(document.getElementById('slider'));
