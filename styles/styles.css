@@ -376,6 +376,10 @@ p {
     width: 30%;
     height: 35px;
   }
+  .newsletter h3 {
+    font-size: 12px;
+    margin: 2%;
+  }
 }
 
 footer {
@@ -514,6 +518,82 @@ footer .infoLegal {
   }
   .politicas ul li {
     text-align: center;
+  }
+}
+
+.suggestedOffers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 2%;
+}
+
+.suggestedOffers .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.suggestedOffers__Container {
+  position: relative;
+  width: 20%;
+}
+
+.suggestedOffers__Container img {
+  width: 100%;
+}
+
+.suggestedOffers__InfoContainer {
+  background-color: rgba(23, 27, 39, 0.6);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.suggestedOffers__InfoContainer h3 {
+  margin: 3%;
+  font-size: 19px;
+}
+
+.suggestedOffers__InfoContainer p {
+  font-size: 17px;
+}
+
+.suggestedOffers__Prices {
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.suggestedOffers__Prices .oldPrice {
+  text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+  .suggestedOffers {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .suggestedOffers__Container {
+    width: 70%;
+    margin-bottom: 4%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
