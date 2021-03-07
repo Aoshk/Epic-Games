@@ -155,7 +155,7 @@ p {
     right: 0px;
     width: 40%;
     height: 100vh;
-    background-color: gray;
+    background-color: black;
   }
 }
 
@@ -594,6 +594,59 @@ footer .infoLegal {
   .suggestedOffers__Container {
     width: 70%;
     margin-bottom: 4%;
+  }
+}
+
+.reviews {
+  padding: 1em;
+}
+
+.reviews__Div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.reviews__Container {
+  width: 30%;
+  padding: 1%;
+  background-color: #2E3344;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3%;
+}
+
+.reviews__Container__Image {
+  justify-self: flex-end;
+  width: 80px;
+  margin-bottom: auto;
+}
+
+.reviews__Container__Image img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .reviews__Div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reviews__Container {
+    width: 100%;
+    padding: 3%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

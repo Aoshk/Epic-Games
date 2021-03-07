@@ -1,0 +1,49 @@
+.reviews{
+    padding:1em;
+
+    &__Div{
+        display: flex;
+        padding:1em;
+        justify-content:space-around;
+        
+       
+    }
+    &__Container{
+        width:30%;
+        padding:1%;
+        background-color: #2E3344;
+        display: flex;
+        flex-direction: column;
+        margin:3%;
+
+        &__Image{
+            justify-self: flex-end;
+            width:80px;
+           margin-bottom:auto;
+
+            img{
+
+                width:100%;
+                
+            }
+        }
+       }
+}
+@media (max-width: 768px) {
+    .reviews{
+        
+        &__Div{
+
+            align-items: center;
+        flex-direction: column;
+        }
+      
+       
+    &__Container {
+        width: 100%;
+        padding: 3%;
+    }
+    }
+
+
+}
