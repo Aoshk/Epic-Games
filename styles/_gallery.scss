@@ -26,3 +26,18 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+   
+    .hitman {
+       
+        &__ImagesContainer {
+           
+    
+            .hitman__Images {
+                width: 40%;
+               
+            }
+        }
+    }
+}

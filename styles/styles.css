@@ -43,6 +43,12 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .hitman__ImagesContainer .hitman__Images {
+    width: 40%;
+  }
+}
+
 button {
   width: 140px;
   height: 50px;
@@ -280,7 +286,7 @@ p {
 .features__container h2 {
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 40px;
+  margin-bottom: 5%;
   text-align: center;
 }
 
@@ -613,7 +619,7 @@ footer .infoLegal {
 .reviews__Container {
   width: 30%;
   padding: 1%;
-  background-color: #2E3344;
+  background-color: #2e3344;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -622,16 +628,23 @@ footer .infoLegal {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 3%;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .reviews__Container__Image {
   justify-self: flex-end;
   width: 80px;
-  margin-bottom: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .reviews__Container__Image img {
   width: 100%;
+  margin-right: 25px;
 }
 
 @media (max-width: 768px) {
