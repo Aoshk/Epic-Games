@@ -1,5 +1,5 @@
 let botonMenu = document.querySelector(".imgMenuMobile");
-let menuMobile = document.querySelector(".divMenuMobile")
+let menuMobile = document.querySelector(".divMenuMobile");
 let closeMenu = document.querySelector(".closeMenu");
 let bannerHitman = document.querySelector(".imageBanner");
 let images = document.querySelectorAll(".images");

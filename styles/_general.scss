@@ -2,15 +2,15 @@
     box-sizing: border-box;
     color: white;
 }
-h3{
+h3 {
     font-family: $Poppins;
-    font-size:14px;
+    font-size: 14px;
 }
 body {
     width: 100%;
     padding: 0px;
     margin: 0px;
-    background-color:#1B1924;
+    background-color: #1b1924;
     height: 100%;
 }
 
@@ -24,11 +24,9 @@ nav {
     background-color: black;
 
     .imgMenuMobile {
-
-        display:none;
+        display: none;
     }
-    .divMenuMobile{
-
+    .divMenuMobile {
         display: none;
     }
 }
@@ -44,54 +42,43 @@ nav {
         }
     }
 }
-p{
-
+p {
     font-family: $Nunito;
 }
 //responsive movil
 @media (max-width: 768px) {
+    nav {
+        width: 100%;
 
-nav {
-
-    width: 100%;
-
-    .imgMenuMobile {
-
-        display:block;
-    }
-   
-    .nav__links{
-
-        display: none;
-        &--mobile{
-
-            display:flex;
-            flex-direction:column;
-            margin-top: 20px;
-            align-self: center;
-            padding-inline-start: 0px;
-         
+        .imgMenuMobile {
+            display: block;
         }
-        
-        li{
 
-            margin: 10px 0px;
+        .nav__links {
+            display: none;
+            &--mobile {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                align-self: center;
+                padding-inline-start: 0px;
+            }
 
+            li {
+                margin: 10px 0px;
+            }
+        }
+        .divMenuMobile {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 20px;
+            top: 0px;
+            right: 0px;
+            width: 40%;
+            height: 100vh;
+            background-color: black;
         }
     }
-    .divMenuMobile{
-
-        position: absolute;
-        display: none;
-        flex-direction: column;
-        align-items: flex-end;
-        padding:20px;
-        top: 0px;
-        right: 0px;
-        width: 40%;
-        height:100vh;
-        background-color: black;
-    }
-}
- 
 }
