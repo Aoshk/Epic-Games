@@ -28,7 +28,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 30%;
-  height: 40%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   padding: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -40,10 +42,25 @@
   margin: 0px;
 }
 
-.containerRegister .register input {
+.containerRegister .register .inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerRegister .register .inputContainer input {
   background-color: #474747;
   margin: 10px;
-  width: 70%;
+  width: 80%;
   height: 50px;
   color: white;
   padding: 10px;
@@ -52,8 +69,9 @@
 }
 
 .containerRegister .register .btnRegister {
+  margin-top: 5%;
   width: 30%;
-  height: 15%;
+  height: 40px;
 }
 
 @media (max-width: 768px) {
@@ -122,13 +140,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 30%;
-  height: 50%;
-  padding: 20px;
+  height: 40%;
+  padding: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .containerLogin .login h3 {
@@ -136,9 +152,25 @@
   margin: 0px;
 }
 
-.containerLogin .login input {
+.containerLogin .login .inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerLogin .login .inputContainer input {
   background-color: #474747;
-  width: 80%;
+  margin: 10px;
+  width: 70%;
   height: 50px;
   color: white;
   padding: 10px;
@@ -147,9 +179,34 @@
 }
 
 .containerLogin .login .btnLogin {
+  margin-top: 10%;
   width: 30%;
-  height: 12%;
-  font-size: 15px;
+  height: 15%;
+}
+
+@media (max-width: 768px) {
+  .containerLogin {
+    width: 100%;
+  }
+  .containerLogin .login {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+  .containerLogin .login .inputContainer input {
+    width: 100%;
+    height: 30px;
+  }
+  .containerLogin .login h3 {
+    font-size: 25px;
+    margin: 0px;
+    margin-top: 20%;
+  }
+  .containerLogin .login .btnLogin {
+    margin-top: 10%;
+    width: 80%;
+    height: 30px;
+  }
 }
 
 .hitman {
