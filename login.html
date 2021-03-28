@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    
+    <div class="containerLogin">
+
+        <div class="login">
+
+        <h3>Log in</h3>
+
+        <div class="inputContainer">
+            <input class="inputEmail input"type="email" placeholder="email">
+            <input class="inputPassword input" type="password" placeholder="password">
+        </div>
+       
+        <button class="btnLogin">Login</button>
+        </div>
+        
+    </div>
+</body>
+
+</html>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC7rq9Fym_-ih5xdR-SwuQjQ8TJZEvhuek",
+    authDomain: "lab-contactos.firebaseapp.com",
+    databaseURL: "https://lab-contactos.firebaseio.com",
+    projectId: "lab-contactos",
+    storageBucket: "lab-contactos.appspot.com",
+    messagingSenderId: "1006646662605",
+    appId: "1:1006646662605:web:9fe7fec496beab7a156084"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./scripts/login.js"></script>
+
