@@ -1,0 +1,51 @@
+.product{
+
+    background:black;
+    width:300px;
+    margin: 0px;
+
+    .image__container{
+
+        
+
+        img{
+
+            width: 100%;
+            
+        }
+    }
+    .product__info{
+
+        display: flex;
+        flex-direction: column;
+
+        .product__title{
+
+            margin-left: 1em;
+            margin-top: 10%;
+            .title{
+
+                margin:0px;
+            }
+        }
+
+
+        .secundaryInfo{
+           
+            display: flex;
+            justify-content:flex-end;
+            align-items:center;
+            
+            .product__price{
+
+                margin-right: 10px;
+            }
+            .product__btnAddToCart{
+
+                width: 50px;
+                height: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
