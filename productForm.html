@@ -11,15 +11,46 @@
 
 <body>
 
+    <header>
+        <nav>
+            
+            <div class="divMenuMobile">
 
+                <img class="closeMenu" src="./data/close-menu-mobile.svg" alt="close menu">
+
+                <ul class="nav__links nav__links--mobile">
+                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="./login.html">Ingresar</a></li>
+                    <li><a href="./register.html">Registrar</a></li>
+                </ul>
+            </div>
+           <a href="./index.html"><img class="logo" src="./data/epic-games logo 1.svg"></a> 
+            <img class="imgMenuMobile" src="./data/mobile-menu.svg" alt="menu mobile">
+            <ul class="nav__links">
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="./login.html">Ingresar</a></li>
+                <li><a href="./register.html">Registrar</a></li>
+            </ul>
+
+        </nav>
+
+    </header>   
     <form class="productForm">
 
-        <div class="productFormImageContainer">
+        <div class="productFormUploadImage">
 
-            <img src="https://img.youtube.com/vi/Z29ORu6_p34/maxresdefault.jpg" alt="">
+            <div class="productFormImageContainer">
+
+                <!-- <img src="https://img.youtube.com/vi/Z29ORu6_p34/maxresdefault.jpg" alt=""> -->
+            </div>
+
+            <input  name="image" type="file">
 
         </div>
-
+        
+        
         <div class="productForm__inputsContainer">
 
             <label for="productForm__name" class="productForm__label">Name</label>
@@ -32,6 +63,8 @@
 
             <label for="productForm__genre" class="productForm__label">Genre</label>
             <select id="productForm__genre" class="productForm__select" name="genre">
+
+                <option value="">Select a value</option>
                 <option value="Action">Action</option>
                 <option value="Adventure">Adventure</option>
                 <option value="Rol">Rol</option>
@@ -39,10 +72,20 @@
             </select>
                
 
+            <label for="productForm__rating" class="productForm__label">rating</label>
+            <select id="productForm__rating" class="productForm__select" name="rating">
+
+                <option value="">Select a value</option>
+                <option value="Teen">Teen</option>
+                <option value="Everyone">Everyone</option>
+                <option value="Mature">Mature</option>
+
+            </select>
+
             <label for="productForm__metacritic" class="productForm__label">Metacritic</label>
             <input id="productForm__metacritic" class="productForm__input" name="metacritic" type="text">
 
-            <label for="productForm__description" class="productForm__label">description</label>
+            <label for="productForm__description" class="productForm__label">Description</label>
             <!-- <textarea id="productForm__description" class="productForm__input" name="description" type=""> -->
                 <textarea name="description" class="productForm__select" id="productForm__description" cols="50" rows="10"></textarea>
 
@@ -55,6 +98,7 @@
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="/__/firebase/8.3.0/firebase-storage.js"></script>
 
 
 <!-- TODO: Add SDKs for Firebase products that you want to use

@@ -170,9 +170,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -186,18 +186,42 @@
           align-items: center;
 }
 
-.productForm .productFormImageContainer {
+.productForm .productFormUploadImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+}
+
+.productForm .productFormUploadImage .productFormImageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 400px;
+  height: 400px;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: 10px;
+  border: 1px solid white;
+  margin-bottom: 10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.productForm .productFormImageContainer img {
+.productForm .productFormUploadImage .productFormImageContainer img {
   width: 100%;
 }
 
@@ -234,11 +258,35 @@
 
 .productForm .productForm__select {
   margin-bottom: 10px;
+  height: 30px;
   color: black;
 }
 
 .productForm .productForm__select option {
   color: black;
+}
+
+@media (max-width: 830px) {
+  .productForm {
+    width: 90vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 1em;
+  }
+  .productForm .productForm__inputsContainer {
+    width: 100%;
+  }
+  .productForm .productFormUploadImage {
+    width: 100%;
+  }
+  .productForm .productFormImageContainer {
+    width: 100%;
+    margin: unset;
+    margin: auto;
+    margin-top: 10px;
+  }
 }
 
 .containerLogin {
