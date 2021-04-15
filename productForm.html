@@ -13,7 +13,7 @@
 
     <header>
         <nav>
-            
+
             <div class="divMenuMobile">
 
                 <img class="closeMenu" src="./data/close-menu-mobile.svg" alt="close menu">
@@ -25,7 +25,7 @@
                     <li><a href="./register.html">Registrar</a></li>
                 </ul>
             </div>
-           <a href="./index.html"><img class="logo" src="./data/epic-games logo 1.svg"></a> 
+            <a href="./index.html"><img class="logo" src="./data/epic-games logo 1.svg"></a>
             <img class="imgMenuMobile" src="./data/mobile-menu.svg" alt="menu mobile">
             <ul class="nav__links">
                 <li><a href="#">Tienda</a></li>
@@ -36,21 +36,21 @@
 
         </nav>
 
-    </header>   
+    </header>
     <form class="productForm">
 
         <div class="productFormUploadImage">
 
             <div class="productFormImageContainer">
 
-                <!-- <img src="https://img.youtube.com/vi/Z29ORu6_p34/maxresdefault.jpg" alt=""> -->
+                <img class="productFormImg" src="" alt="">
             </div>
 
-            <input  name="image" type="file">
+            <input name="image" type="file">
 
         </div>
-        
-        
+
+
         <div class="productForm__inputsContainer">
 
             <label for="productForm__name" class="productForm__label">Name</label>
@@ -68,9 +68,9 @@
                 <option value="Action">Action</option>
                 <option value="Adventure">Adventure</option>
                 <option value="Rol">Rol</option>
-                <option value="Sports">Sports   </option>
+                <option value="Sports">Sports </option>
             </select>
-               
+
 
             <label for="productForm__rating" class="productForm__label">rating</label>
             <select id="productForm__rating" class="productForm__select" name="rating">
@@ -87,22 +87,24 @@
 
             <label for="productForm__description" class="productForm__label">Description</label>
             <!-- <textarea id="productForm__description" class="productForm__input" name="description" type=""> -->
-                <textarea name="description" class="productForm__select" id="productForm__description" cols="50" rows="10"></textarea>
+            <textarea name="description" class="productForm__select" id="productForm__description" cols="50"
+                rows="10"></textarea>
 
             <button class="productForm__button" type="submit">Enviar</button>
 
-        </div> 
+        </div>
 
     </form>
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-<script src="/__/firebase/8.3.0/firebase-storage.js"></script>
+
 
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
 <script>
   // Your web app's Firebase configuration
@@ -116,6 +118,7 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+    
 </script>
 <script src="./scripts/productForm.js"></script>
 
