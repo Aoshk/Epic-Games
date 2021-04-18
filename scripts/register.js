@@ -1,57 +1,55 @@
-const database=firebase.database();
+const database = firebase.database();
 const auth = firebase.auth();
 const inputName = document.querySelector(".inputName")
 const inputEmail = document.querySelector(".inputEmail")
 const inputPassword = document.querySelector(".inputPassword")
 const inputPassword2 = document.querySelector(".inputRepeatPassword")
-const btnRegister= document.querySelector(".btnRegister")
+const btnRegister = document.querySelector(".btnRegister")
 //const btnLogin=document.querySelector("btnLogin")
 
 
-  Register =()=>{
+Register = () => {
 
     //no hay campos vacios
-    if(!(inputName.value==""||inputEmail.value==""|| inputPassword.value==""||inputPassword2.value=="")){
+    if (!(inputName.value == "" || inputEmail.value == "" || inputPassword.value == "" || inputPassword2.value == "")) {
 
         // las contraseñas coinciden
 
-        if(inputPassword.value===inputPassword2.value){
+        if (inputPassword.value === inputPassword2.value) {
 
-            auth.createUserWithEmailAndPassword(inputEmail.value,inputPassword.value).then(
+            auth.createUserWithEmailAndPassword(inputEmail.value, inputPassword.value).then(
 
-            (data)=>{
+                (data) => {
 
-                let user={ 
-
-                id: data.user.uid,
-                name: inputName.value,
-                email:inputEmail.value,
-                password:inputPassword
-
-                }
-                
-                database.ref("Users/"+user.id).set(user).then(
-                    ()=>{
-
-                        window.location.href="home.html"
-
+                    let user = {
+                        id: data.user.uid,
+                        name: inputName.value,
+                        email: inputEmail.value,
+                        password: inputPassword
 
                     }
-                )
-               
-            }
+
+                    database.ref("Users/" + user.id).set(user).then(
+                        () => {
+
+                            window.location.href = "index.html"
+
+
+                        }
+                    )
+                }
             )
 
         }
 
-        else{
+        else {
 
-            alert("The password don´t match")
+            alert("Las contraseñas no coinciden")
         }
 
     }
 
-    else{
+    else {
 
 
         alert("Please fill all the blank fields")
@@ -60,7 +58,7 @@ const btnRegister= document.querySelector(".btnRegister")
 
 
 
-btnRegister.addEventListener("click",Register);
+btnRegister.addEventListener("click", Register);
 // btnLogin.addEventListener("click",()=>{
 
 //     window.location.href="login.html"

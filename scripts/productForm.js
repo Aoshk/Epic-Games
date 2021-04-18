@@ -3,18 +3,20 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 const productImg = document.querySelector(".productFormImg");
 
-let storageRef= firebase.storage().ref();
+let storageRef = firebase.storage().ref();
+
+let productImgRef = storageRef.child(`products`)
 
 console.log(productForm)
 
 //actualiza la vista previa de la imagen
-productForm.image.addEventListener("change",()=>{
+productForm.image.addEventListener("change", () => {
 
     var reader = new FileReader();
 
-    reader.onload = function(e){
+    reader.onload = function (e) {
 
-        productImg.setAttribute("src",e.target.result);
+        productImg.setAttribute("src", e.target.result);
     }
 
     reader.readAsDataURL(productForm.image.files[0]);
@@ -23,7 +25,7 @@ productForm.image.addEventListener("change",()=>{
 
 
 //evento de subir el producto
-productForm.addEventListener("submit", (event)=>{
+productForm.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
@@ -35,7 +37,7 @@ productForm.addEventListener("submit", (event)=>{
     // metacritic: productForm.metacritic.value
     // }
 
-    
+
     console.log(productForm.image.files);
     //db.collection("products").add(product);
 

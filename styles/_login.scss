@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         width: 30%;
-        height: 40%;
+        
         padding: 30px;
         align-items: center;
             
@@ -41,9 +41,10 @@
         }
 
         .btnLogin {
-            margin-top: 10%;
+            margin-top: 5%;
             width: 30%;
-            height: 15%;
+            height: 40%;
+            padding: 0.5em;
         }
     }
 }
