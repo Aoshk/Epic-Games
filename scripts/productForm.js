@@ -3,11 +3,9 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 const productImg = document.querySelector(".productFormImg");
 
-let storageRef = firebase.storage().ref();
+const imageFiles=[];
 
-let productImgRef = storageRef.child(`products`)
 
-console.log(productForm)
 
 //actualiza la vista previa de la imagen
 productForm.image.addEventListener("change", () => {
@@ -20,8 +18,8 @@ productForm.image.addEventListener("change", () => {
     }
 
     reader.readAsDataURL(productForm.image.files[0]);
-});
 
+});
 
 
 //evento de subir el producto
@@ -29,17 +27,37 @@ productForm.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
-    // const product = {
-    // name: productForm.name.value,
-    // price: parseFloat(productForm.price.value),
-    // genre: productForm.genre.value,
-    // description: productForm.description.value,
-    // metacritic: productForm.metacritic.value
-    // }
+    const product = {
+    name: productForm.name.value,
+    price: parseFloat(productForm.price.value),
+    genre: productForm.genre.value,
+    description: productForm.description.value,
+    metacritic: productForm.metacritic.value
+    }
 
+    
 
+    let storageRef = firebase.storage().ref();
+    const file =productForm.image.files[0];
+
+    let fileRef = storageRef.child(`images/${product.name}/${file.name}`);
     console.log(productForm.image.files);
-    //db.collection("products").add(product);
 
-})
+    fileRef.put(file).then((snapshot)=>{
+
+        snapshot.ref.getDownloadURL().then((downloadURL)=>{
+        
+        product.imageURL=downloadURL;
+        product.imageRef=snapshot.ref.fullPath;
+
+        db.collection("products").add(product);
+
+        })
+
+    })
+    
+
+});
+
+
 
