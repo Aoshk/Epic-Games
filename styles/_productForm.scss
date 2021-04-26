@@ -19,16 +19,24 @@
         .productFormImageContainer {
             display: flex;
             align-items: center;
+            box-sizing: border-box;
+            padding:10px;
             height: 400px;
             width: 100%;
-            flex-direction: column;
             margin-right: 10px;
             border: 1px solid white;
             margin-bottom: 10px;
             justify-content:flex-end;
-    
+            flex-wrap: wrap;
+            
+            .productFormImg{
+
+                display: flex;
+
+            }
+            
             img {
-                width: 100%;
+                width: 50%;  
             }
         }
     }
