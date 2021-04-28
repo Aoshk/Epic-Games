@@ -56,7 +56,7 @@ productForm.addEventListener("submit", (event) => {
         })
 
         //espera  a que se suba todas las imagenes y obtiene url 
-        Promise.all(uploadPromises), then(function (snapshots) {
+        Promise.all(uploadPromises).then(function (snapshots) {
 
             snapshots.forEach(function (snapshot) {
 
@@ -65,11 +65,38 @@ productForm.addEventListener("submit", (event) => {
             });
 
             Promise.all(downloadURLPromises).then(function (dowloadURL) {
+                const images= []
 
+                dowloadURL.forEach(function (url,index){
+
+                    images.push({
+
+                        url:url,
+                        ref:snapshots[index].ref.fullPath
+                    });
+
+                })
+
+                db.collection("products").doc(docref.id).update({
+
+                    images:images
+                }).then(function (){
+
+                    alert("producto subido satisfactoriamente")
+                })
+
+                
             })
 
         })
-    });
+    }).catch(function (error){
+
+
+        console.log(error)
+    })
+
+
+    
 
 
 
