@@ -9,7 +9,7 @@ db.collection("products").get().then(querySnapshot => {
 
         if(!img){
 
-            img ="placeHolder.png";
+            img ="./data/placeHolder.png";
         }
 
         product.innerHTML = ` 
