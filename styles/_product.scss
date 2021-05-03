@@ -1,28 +1,31 @@
-.product{
+.list{
 
-    background:black;
+    display:flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+}
+
+.product {
+
+    background-color:black;
     width:300px;
-    margin: 0px;
+    margin: 10px;
 
     .image__container{
-
-        
-
+        width: 100%;
         img{
-
-            width: 100%;
-            
+            width: 100%;   
         }
     }
     .product__info{
-
+        width: 300px;
         display: flex;
         flex-direction: column;
 
         .product__title{
 
             margin-left: 1em;
-            margin-top: 10%;
+            margin-top: 5%;
             .title{
 
                 margin:0px;

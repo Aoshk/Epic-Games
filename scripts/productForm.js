@@ -1,6 +1,4 @@
 const productForm = document.querySelector(".productForm");
-const db = firebase.firestore();
-const storage = firebase.storage();
 const divImages = document.querySelector(".productFormImageContainer")
 
 const imageFiles = [];

@@ -15,7 +15,6 @@
         align-items: center;
         width:500px;
         
-
         .productFormImageContainer {
             display: flex;
             align-items: center;
@@ -26,13 +25,11 @@
             margin-right: 10px;
             border: 1px solid white;
             margin-bottom: 10px;
-            justify-content:flex-end;
+            justify-content:flex-start;
             flex-wrap: wrap;
-            
             .productFormImg{
 
                 display: flex;
-
             }
             
             img {
