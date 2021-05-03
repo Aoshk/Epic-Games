@@ -6,15 +6,17 @@ db.collection("products").get().then(querySnapshot => {
         const data = doc.data();
         const product = document.createElement("div");
         let img = data.images[0]?.url;
+
         if(!img){
 
-            img='./data/placeholder.png'
+            img ="placeHolder.png";
         }
+
         product.innerHTML = ` 
     <a>
     <div class="image__container">
 
-    <img src="${img}
+    <img src="${img}"
          class="product__image">
 </div>
 
