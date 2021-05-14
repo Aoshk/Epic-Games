@@ -11,9 +11,54 @@
 
 <body>
 
+    <form class="filter">
+
+        <div class="filter__container"> 
+            <label for="filterRating">Rating</label>
+            <select id="filterRating" class="filter__rating" name="rating">
+
+                <option value="">Select a value</option>
+                <option value="Teen">Teen</option>
+                <option value="Everyone">Everyone</option>
+                <option value="Mature">Mature</option>
+
+            </select>
+
+        </div>
+
+        <div class="filter__container">
+            <label for="filterGenre">Genre</label>
+            <select id="filterGenre" class="filter__genre" name="genre">
+
+                <option value="">Select a value</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Racing">Racing</option>
+                <option value="Co-Op">Co-Op</option>
+                <option value="Rol">Rol</option>
+                <option value="Sports">Rol</option>
+
+            </select>
+
+        </div>
+
+        <div class="filter__container">
+
+            <label for="filterPrice">Price</label>
+            <select id="filterPrice" class="filter__price" name="price">
+
+                <option value="">Select a value</option>
+                <option value="0">Less than $100.000</option>
+                <option value="1">Between $100.000 and $200.000</option>
+                <option value="2">More than $200.000</option>
+            </select>
+        </div>
+
+
+    </form>
     <section class="list">
 
-      
+
     </section>
 </body>
 

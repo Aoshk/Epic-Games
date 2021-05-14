@@ -1,15 +1,19 @@
 const list = document.querySelector(".list");
+const filters = document.querySelector(".filter")
 
-db.collection("products").get().then(querySnapshot => {
-   
+
+const showList = (querySnapshot) => {
+
+
+    list.innerHTML = ""
     querySnapshot.forEach((doc) => {
         const data = doc.data();
         const product = document.createElement("div");
         let img = data.images[0]?.url;
 
-        if(!img){
+        if (!img) {
 
-            img ="./data/placeHolder.png";
+            img = "./data/placeHolder.png";
         }
 
         product.innerHTML = ` 
@@ -27,8 +31,6 @@ db.collection("products").get().then(querySnapshot => {
         <h2 class="title">${data.name}</h2>
 
     </div>
-   
-
     <div class="secundaryInfo">
         <p class="product__price">${"$" + data.price}</p>
         <button class="product__btnAddToCart">Add</button>
@@ -42,7 +44,49 @@ db.collection("products").get().then(querySnapshot => {
         list.appendChild(product);
     })
 
-});
+}
+
+
+
+//escucha cambios al filtro
+filters.addEventListener("change", () => {
+
+    let productCollection = db.collection("products");
+
+    //verfica que el filtro no esté vacio
+    if (filters.genre.value) {
+        productCollection = productCollection.where("genre", "==", filters.genre.value);
+    }
+
+    if(filters.rating.value) {
+        productCollection = productCollection.where("rating", "==", filters.rating.value);
+    }
+    if(filters.price.value){
+
+        switch(filters.price.value){
+
+            case "0":
+                productCollection = productCollection.where("price", "<", 100000);
+            break;
+
+            case "1":
+                productCollection = productCollection.where("price", ">", 100000);
+                productCollection = productCollection.where("price", "<", 200000);
+            break;
+            case "2":
+                productCollection = productCollection.where("price", ">", 200000);
+            break;
+
+
+        }
+    }
+    productCollection.get().then(showList);
+
+})
+
+
+
+db.collection("products").get().then(showList);
 
 
 
