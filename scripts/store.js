@@ -4,11 +4,10 @@ const filters = document.querySelector(".filter")
 
 const showList = (querySnapshot) => {
 
-
     list.innerHTML = ""
     querySnapshot.forEach((doc) => {
         const data = doc.data();
-        const product = document.createElement("div");
+        const product = document.createElement("a");
         let img = data.images[0]?.url;
 
         if (!img) {
@@ -41,6 +40,7 @@ const showList = (querySnapshot) => {
     `
 
         product.classList.add("product");
+        product.setAttribute("href","#"+doc.id)
         list.appendChild(product);
     })
 
@@ -76,9 +76,42 @@ filters.addEventListener("change", () => {
             case "2":
                 productCollection = productCollection.where("price", ">", 200000);
             break;
-
-
         }
+
+       
+
+    }
+
+    if(filters.order.value){
+
+        switch(filters.order.value){
+
+            case "recent":
+                if(filters.price.value){
+                    productCollection = productCollection.orderBy("price", "desc")
+                }
+                productCollection = productCollection.orderBy("createdAt", "desc")
+            break;
+            case "price_asc":
+                productCollection = productCollection.orderBy("price", "asc")
+            break;
+            case "price_desc":
+                productCollection = productCollection.orderBy("price", "desc")
+            break;
+            case "alpha_asc":
+                if(filters.price.value){
+                    productCollection = productCollection.orderBy("price", "desc")
+                }
+                productCollection = productCollection.orderBy("name", "asc")
+            break;
+            case "alpha_desc":
+                if(filters.price.value){
+                    productCollection = productCollection.orderBy("price", "desc")
+                }
+                productCollection = productCollection.orderBy("name", "desc")
+            break;
+        }
+
     }
     productCollection.get().then(showList);
 

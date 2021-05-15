@@ -34,7 +34,8 @@ productForm.addEventListener("submit", (event) => {
         price: parseFloat(productForm.price.value),
         genre: productForm.genre.value,
         description: productForm.description.value,
-        metacritic: productForm.metacritic.value
+        metacritic: productForm.metacritic.value,
+        createdAt: Date.now()
     }
 
     db.collection("products").add(product).then(function (docref) {
