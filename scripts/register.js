@@ -1,5 +1,3 @@
-const database = firebase.database();
-const auth = firebase.auth();
 const inputName = document.querySelector(".inputName")
 const inputEmail = document.querySelector(".inputEmail")
 const inputPassword = document.querySelector(".inputPassword")
@@ -24,19 +22,13 @@ Register = () => {
                     let user = {
                         id: data.user.uid,
                         name: inputName.value,
-                        email: inputEmail.value,
-                        password: inputPassword
-
+                        email: inputEmail.value
                     }
+                    db.collection("users").doc(user.uid).set(user).then(()=>{
 
-                    database.ref("Users/" + user.id).set(user).then(
-                        () => {
-
-                            window.location.href = "index.html"
-
-
-                        }
-                    )
+                       // window.location.href="index.html"
+                    })
+                    
                 }
             )
 

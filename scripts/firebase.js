@@ -12,4 +12,23 @@
 
   const db = firebase.firestore();
   const storage = firebase.storage();
+  const auth = firebase.auth();
+
+  auth.onAuthStateChanged(
+
+
+    (user) => {
+
+        //hay un usuario logeado
+        if (user!=null) {
+
+            console.log(user)
+           //window.location.href="index.html"
+           
+        }
+
+        
+    }
+)
+
     

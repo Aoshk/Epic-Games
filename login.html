@@ -18,25 +18,22 @@
                 <img class="closeMenu" src="./data/close-menu-mobile.svg" alt="close menu">
 
                 <ul class="nav__links nav__links--mobile">
-                    <li><a href="#">Tienda</a></li>
+                    <li><a href="./store.html">Tienda</a></li>
                     <li><a href="#">Ayuda</a></li>
                     <li><a href="./login.html">Ingresar</a></li>
-                    <li><a href="./register.html">Registrar</a></li>
+                    
                 </ul>
             </div>
             <a href="./index.html"><img class="logo" src="./data/epic-games logo 1.svg"></a>
             <img class="imgMenuMobile" src="./data/mobile-menu.svg" alt="menu mobile">
             <ul class="nav__links">
-                <li><a href="#">Tienda</a></li>
+                <li><a href="./store.html">Tienda</a></li>
                 <li><a href="#">Ayuda</a></li>
                 <li><a href="./login.html">Ingresar</a></li>
-                <li><a href="./register.html">Registrar</a></li>
+                
             </ul>
 
         </nav>
-
-
-
 
     </header>
     <div class="containerLogin">
@@ -51,6 +48,8 @@
             </div>
 
             <button class="btnLogin">Login</button>
+
+           <a href="./register.html"><p>Dont have an account yet?</p> </a>
         </div>
 
     </div>
@@ -58,24 +57,12 @@
 
 </html>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyBZDbhptmWRsjZFpfQmF5h1a4JQ36acF74",
-        authDomain: "epic-store-72502.firebaseapp.com",
-        projectId: "epic-store-72502",
-        storageBucket: "epic-store-72502.appspot.com",
-        messagingSenderId: "509566163963",
-        appId: "1:509566163963:web:e899a3a54952a88ade895e"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-</script>
+<script src="./scripts/firebase.js"></script>
 <script src="./scripts/login.js"></script>
 <script src="./scripts/script.js"></script>
