@@ -33,6 +33,7 @@ productForm.addEventListener("submit", (event) => {
         name: productForm.name.value,
         price: parseFloat(productForm.price.value),
         genre: productForm.genre.value,
+        rating:productForm.rating.value,
         description: productForm.description.value,
         metacritic: productForm.metacritic.value,
         createdAt: Date.now()

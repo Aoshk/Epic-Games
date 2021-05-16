@@ -822,9 +822,9 @@ p {
 @media (max-width: 768px) {
   .banner {
     background-image: url("../data/banner-mobile.jpg");
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -990,10 +990,12 @@ footer {
   display: -ms-flexbox;
   display: flex;
   background-color: black;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer .footerlogo {
@@ -1036,8 +1038,6 @@ footer .socialFooter {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: auto;
-  margin-left: 5%;
 }
 
 footer .socialFooter h1 {
