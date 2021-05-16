@@ -21,18 +21,21 @@
                 <img class="closeMenu" src="./data/close-menu-mobile.svg" alt="close menu">
 
                 <ul class="nav__links nav__links--mobile">
-                    <li><a href="./store.html">Tienda</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                    <li><a href="./login.html">Ingresar</a></li>
+                    <li><a href="./store.html">Store</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li class="login "><a href="./login.html">Login</a></li>
+                    <li class="logout hidden">Logout</li>
                     
                 </ul>
             </div>
             <a href="./index.html"><img class="logo" src="./data/epic-games logo 1.svg"></a>
             <img class="imgMenuMobile" src="./data/mobile-menu.svg" alt="menu mobile">
             <ul class="nav__links">
-                <li><a href="./store.html">Tienda</a></li>
-                <li><a href="#">Ayuda</a></li>
-                <li><a href="./login.html">Ingresar</a></li>
+                <li><a href="./store.html">Store</a></li>
+                <li><a href="#">Help</a></li>
+                <li class="login "><a href="./login.html">Login</a></li>
+                <li class="logout hidden"><a href="./login.html">Logout</a></li>
+                
                 
             </ul>
 
@@ -41,8 +44,6 @@
     </header>
 
     <div class="banner">
-
-
         <div class="banner__content">
 
             <h2 class="banner__contentTitle">LA MUERTE ESPERA</h2>
@@ -304,5 +305,15 @@
     </script>
 
 </body>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+
+<script src="scripts/firebase.js"></script>
+
 
 </html>

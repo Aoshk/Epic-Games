@@ -10,25 +10,59 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  
+  const login = document.querySelectorAll(".login");
+  const logout = document.querySelectorAll(".logout");
   const db = firebase.firestore();
   const storage = firebase.storage();
   const auth = firebase.auth();
+  logout.forEach(element =>{
 
+    element.addEventListener("click",logOut);
+
+  })
+  
   auth.onAuthStateChanged(
-
 
     (user) => {
 
         //hay un usuario logeado
-        if (user!=null) {
+        if (user) {
+            
+          console.log(user.email);
+            login.forEach(element=>{
 
-            console.log(user)
-           //window.location.href="index.html"
-           
+              element.classList.add("hidden")
+            })
+            logout.forEach(element=>{
+
+              element.classList.remove("hidden")
+            })
+        
+        }
+        else{
+
+          login.forEach(element=>{
+
+            element.classList.remove("hidden")
+          })
+          logout.forEach(element=>{
+
+            element.classList.add("hidden")
+          })
         }
 
         
     }
 )
+
+function logOut(){
+
+  auth.signOut().then(()=>{
+
+    window.location.href="index.html"
+  })
+  console.log("deslogueado")
+}
 
     
