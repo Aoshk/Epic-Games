@@ -53,10 +53,11 @@ nav .divMenuMobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.nav__links li {
-  padding: 0px 20px;
+  width: 30%;
+  padding: unset;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .nav__links li a {
@@ -229,6 +230,11 @@ p {
   background-color: black;
   width: 300px;
   margin: 10px;
+  text-decoration: none;
+}
+
+.product a {
+  text-decoration: none;
 }
 
 .product .image__container {
@@ -257,6 +263,7 @@ p {
 
 .product .product__info .product__title .title {
   margin: 0px;
+  text-decoration: none;
 }
 
 .product .product__info .secundaryInfo {
@@ -638,6 +645,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   margin-top: 3%;
+  padding-left: 15px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;

@@ -38,9 +38,12 @@ nav {
 .nav__links {
     list-style: none;
     display: flex;
+    width:30%;
+    padding:unset;
+    justify-content:space-evenly ;
 
     li {
-        padding: 0px 20px;
+        
         a {
             text-decoration: none;
         }

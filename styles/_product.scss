@@ -3,7 +3,11 @@
     background-color:black;
     width:300px;
     margin: 10px;
+    text-decoration: none;
 
+    a{
+        text-decoration: none;
+    }
     .image__container{
         width: 100%;
         img{
@@ -20,8 +24,8 @@
             margin-left: 1em;
             margin-top: 5%;
             .title{
-
                 margin:0px;
+                text-decoration: none;
             }
         }
 
