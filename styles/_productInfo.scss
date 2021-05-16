@@ -1,0 +1,97 @@
+.productInfo {
+    width: 100%;
+    margin: auto;
+    &__bannerContainer {
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+        // background: url("https://generacionxbox.com/wp-content/uploads/2020/11/Hutman-3.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__priceContainer {
+        display: flex;
+        position: absolute;
+        left: 70%;
+        top: 55%;
+        min-width: 200px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #080735;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 20vw;
+        .price {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .btnAddToCart {
+            width: 80%;
+        }
+    }
+    &__title{
+        
+        margin-top: 2%;
+        margin-left:15px;
+
+        h2{
+            font-family: $Poppins;
+            font-size:26px;
+            margin: 0;
+        }
+    }
+
+    &__basicInfo{
+        
+        display:flex;
+        margin-left:15px;
+        align-items:center;
+
+        .metacritic{
+
+            font-family: $Poppins;
+            font-size:20px;
+            font-weight:50;
+        }
+        .rating{
+
+            margin-left:20px;
+            font-family: $Poppins;
+            font-size:20px;
+        }
+    }
+
+    &__image{
+
+        display:flex;
+        margin-top: 3%;
+        justify-content: space-evenly;
+        &Container{
+            width: 25%;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &__description{
+
+        margin-left:15px;
+        .description{
+
+            max-width: 85%;
+            font-weight: 400;
+        }
+
+    }
+    .suggestedOffersDetails{
+
+        
+        h3{
+            margin-left:15px;
+            font-size:14px
+        }
+    }
+}

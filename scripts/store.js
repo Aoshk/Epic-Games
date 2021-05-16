@@ -40,7 +40,7 @@ const showList = (querySnapshot) => {
     `
 
         product.classList.add("product");
-        product.setAttribute("href","#"+doc.id)
+        product.setAttribute("href",`./product.html?id=${doc.id}&=${data.name   }`)
         list.appendChild(product);
     })
 
