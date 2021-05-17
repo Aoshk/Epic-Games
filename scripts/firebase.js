@@ -23,6 +23,16 @@ logout.forEach(element => {
 
 })
 
+let cart = [];
+const cartFromLocalStorage = localStorage.getItem("store__cart")
+const cartNumber = document.querySelector(".cartNumber");
+if (cartFromLocalStorage) {
+
+    cart = JSON.parse(cartFromLocalStorage)
+    cartNumber.innerText = cart.length
+}
+
+
 auth.onAuthStateChanged(
 
   (user) => {

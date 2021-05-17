@@ -114,6 +114,54 @@ p {
   }
 }
 
+.cartPage {
+  margin: 10px auto;
+}
+
+table {
+  margin-left: 20px;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.cartInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cartInfo img {
+  width: 127.29px;
+  height: 100.87px;
+  margin-right: 10px;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  color: black;
+}
+
+td a {
+  text-decoration: none;
+}
+
+.cartDetails {
+  margin-left: 0.5rem;
+}
+
 .containerRegister {
   display: -webkit-box;
   display: -ms-flexbox;

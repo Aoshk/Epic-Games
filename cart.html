@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="divMenuMobile">
+
+                <img class="closeMenu" src="./data/close-menu-mobile.svg" alt="close menu">
+
+                <ul class="nav__links nav__links--mobile">
+                    <li><a href="./store.html">Store</a></li>
+                    <li class="cart "><a href="./cart.html"><img class="logo" src="./data/shopping-cart.svg"></a></li>
+                    <li class="login "><a href="./login.html">Login</a></li>
+                    <li class="logout hidden">Logout</li>
+
+                </ul>
+            </div>
+
+            <a href="./index.html"><img class="logo" src="./data/epic-games logo 1.svg"></a>
+            <img class="imgMenuMobile" src="./data/mobile-menu.svg" alt="menu mobile">
+            <ul class="nav__links">
+                <li><a href="./store.html">Store</a></li>
+                <li class="login "><a href="./login.html">Login</a></li>
+                <li class="logout hidden"><a href="./login.html">Logout</a></li>
+                <li class="cart "><a href="./cart.html"><img class="logo" src="./data/shopping-cart.svg"> <span
+                            class="cartNumber"></span></a></li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div class="smallContainer cartPage">
+        <table>
+
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr class="CartContainer">
+                <td class="cartItem">
+
+                    <div class="cartInfo">
+                        <img src="https://i1.wp.com/hipertextual.com/wp-content/uploads/2021/01/Hitman-3-portada-scaled.jpg?fit=1200%2C770&ssl=1"
+                            alt="">
+                        <div class="cartDetails">
+                            <p>Hitman 3</p>
+                            <p class="removeCart">Remove</p>
+                        </div>
+
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$500.000</td>
+            </tr>
+            
+        </table>
+    </div>
+
+</body>
+
+</html>

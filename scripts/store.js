@@ -1,7 +1,5 @@
 const list = document.querySelector(".list");
 const filters = document.querySelector(".filter");
-const cart = [];
-
 
 const showList = (querySnapshot) => {
 
@@ -45,7 +43,10 @@ const showList = (querySnapshot) => {
         list.appendChild(product);
         const cartBtn = product.querySelector(".product__btnAddToCart");
         cartBtn.addEventListener("click", () => {
-            console.log(data)
+
+            cart.push(data)
+            localStorage.setItem("store__cart", JSON.stringify(cart))
+            cartNumber.innerText = cart.length
 
         })
     })
