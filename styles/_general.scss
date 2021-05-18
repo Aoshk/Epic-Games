@@ -3,13 +3,19 @@
     color: white;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 h3 {
     font-family: $Poppins;
     font-size: 14px;
 }
+
+h2 {
+    font-family: $Poppins;
+    font-size: 18px;
+}
+
 body {
     width: 100%;
     padding: 0px;
@@ -38,18 +44,17 @@ nav {
 .nav__links {
     list-style: none;
     display: flex;
-    width:30%;
-    padding:unset;
-    justify-content:space-evenly ;
+    width: 30%;
+    padding: unset;
+    justify-content: space-evenly;
 
     li {
-        
         a {
             text-decoration: none;
         }
     }
 }
-p {
+p{
     font-family: $Nunito;
 }
 //responsive movil

@@ -16,6 +16,11 @@ h3 {
   font-size: 14px;
 }
 
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
 body {
   width: 100%;
   padding: 0px;
@@ -114,52 +119,97 @@ p {
   }
 }
 
-.cartPage {
-  margin: 10px auto;
-}
-
-table {
-  margin-left: 20px;
-  width: 80%;
-  border-collapse: collapse;
-}
-
-.cartInfo {
+.order {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-.cartInfo img {
-  width: 127.29px;
-  height: 100.87px;
-  margin-right: 10px;
+.summaryContainer {
+  margin-top: 20px;
+  margin-left: 50px;
+  background-color: #080735;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-th {
-  text-align: left;
-  padding: 5px;
+.summaryContainer h2 {
+  text-align: center;
 }
 
-td {
-  padding: 10px 5px;
+.summaryContainer .purchaseBtn {
+  margin-top: 10px;
+  width: 100%;
 }
 
-td input {
-  width: 40px;
-  height: 30px;
-  padding: 5px;
-  color: black;
+.cartProductList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-td a {
-  text-decoration: none;
+.cartContainer {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.cartDetails {
-  margin-left: 0.5rem;
+.cartContainer__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cartContainer__header .headerPrice {
+  padding-right: 30px;
+}
+
+.cartContainer__header .headerDetails {
+  padding-right: 10px;
+}
+
+.cartProduct {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1%;
+}
+
+.cartProduct img {
+  width: 250px;
+}
+
+.cartProduct__info {
+  font-size: 26px;
+  margin-left: 25px;
+}
+
+.cartProduct__info .removeProduct {
+  font-size: 16px;
+  color: red;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.cartProduct__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
 }
 
 .containerRegister {

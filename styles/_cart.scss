@@ -1,46 +1,69 @@
-.cartPage{
-
-    margin: 10px auto;
-}
-
-table{
-    margin-left: 20px;
-    width:80%;
-    border-collapse:collapse;
-}
-
-
-.cartInfo{
-
+.order {
     display: flex;
-    flex-wrap: wrap;
-
-    img{
-        width: 127.29px;
-        height:100.87px;
-        margin-right: 10px;
-    }
-}
-th{
-    text-align: left;
-    padding: 5px;
-}
-td{
-
-    padding: 10px 5px;
-
-    input{
-        width: 40px;
-        height: 30px;
-        padding: 5px;
-        color: black;
-    }
-    a{
-
-        text-decoration: none;
-    }
 }
 
-.cartDetails{
-    margin-left: 0.5rem
+.summaryContainer {
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: #080735;
+    width: 400px;
+    padding: 20px;
+
+    h2 {
+        text-align: center;
+    }
+    .purchaseBtn {
+        margin-top: 10px;
+        width: 100%;
+    }
+    border-radius: 10px;
+}
+
+.cartProductList {
+    display: flex;
+    flex-direction: column;
+}
+.cartContainer {
+    padding: 20px;
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        .headerPrice {
+            padding-right: 30px;
+        }
+
+        .headerDetails {
+            padding-right: 10px;
+        }
+    }
+}
+.cartProduct {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1%;
+
+    img {
+        width: 250px;
+    }
+
+    &__info {
+        font-size: 26px;
+        margin-left: 25px;
+        .removeProduct {
+            font-size: 16px;
+            color: red;
+            font-family: $Nunito;
+        }
+    }
+
+    &__price {
+        display: flex;
+
+        margin-left: auto;
+    }
 }
