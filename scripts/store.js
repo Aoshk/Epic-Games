@@ -42,11 +42,20 @@ const showList = (querySnapshot) => {
         product.classList.add("product");
         list.appendChild(product);
         const cartBtn = product.querySelector(".product__btnAddToCart");
+
         cartBtn.addEventListener("click", () => {
 
-            cart.push(data)
-            localStorage.setItem("store__cart", JSON.stringify(cart))
-            cartNumber.innerText = cart.length
+            if (cart.includes(data)) {
+                alert("You already added this product to your cart")
+            }
+            else {
+
+                cart.push(data)
+                localStorage.setItem("store__cart", JSON.stringify(cart))
+                cartNumber.innerText = cart.length
+            }
+
+
 
         })
     })

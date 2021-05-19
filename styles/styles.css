@@ -324,6 +324,19 @@ p {
   }
 }
 
+.suggestedOffers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+}
+
+.suggestedOffers__list .product {
+  width: 25%;
+}
+
 .product {
   background-color: black;
   width: 300px;

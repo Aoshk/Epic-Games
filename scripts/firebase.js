@@ -29,6 +29,7 @@ const cartNumber = document.querySelector(".cartNumber");
 if (cartFromLocalStorage) {
 
     cart = JSON.parse(cartFromLocalStorage)
+    console.log(cart)
     cartNumber.innerText = cart.length
 }
 
