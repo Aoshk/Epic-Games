@@ -45,17 +45,16 @@ const showList = (querySnapshot) => {
 
         cartBtn.addEventListener("click", () => {
 
-            if (cart.includes(data)) {
+            if (cart.includes(doc.id)) {
                 alert("You already added this product to your cart")
             }
             else {
-
-                cart.push(data)
-                localStorage.setItem("store__cart", JSON.stringify(cart))
-                cartNumber.innerText = cart.length
+               
+                addToCart({
+                    ...data,
+                    id: doc.id
+                })
             }
-
-
 
         })
     })
