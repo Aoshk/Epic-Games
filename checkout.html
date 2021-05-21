@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+
+            <div class="divMenuMobile">
+
+                <img class="closeMenu" src="./data/close-menu-mobile.svg" alt="close menu">
+
+                <ul class="nav__links nav__links--mobile">
+                    <li><a href="./store.html">Store</a></li>
+                    <li class="cart "><a href="./cart.html"><img class="logo" src="./data/shopping-cart.svg"></a></li> 
+                    <li class="login "><a href="./login.html">Login</a></li>
+                    <li class="logout hidden">Logout</li>
+                    
+                </ul>
+            </div>
+
+            <a href="./index.html"><img class="logo" src="./data/epic-games logo 1.svg"></a>
+            <img class="imgMenuMobile" src="./data/mobile-menu.svg" alt="menu mobile">
+            <ul class="nav__links">
+                <li><a href="./store.html">Store</a></li>
+                <li class="login "><a href="./login.html">Login</a></li>
+                <li class="logout hidden"><a href="./login.html">Logout</a></li>
+                <li class="cart "><a href="./cart.html"><img class="logo" src="./data/shopping-cart.svg"> <span class="cartNumber"></span></a></li> 
+                
+  
+            </ul>
+
+        </nav>
+
+    </header>
+    
+    <main class="checkoutContainer">
+        <h2>Delivery contact</h2>
+
+        <form class="checkoutForm" action="submit">
+            <label for="name">Name</label>
+            <input class="checkout__input" type="text" name="name" required>
+            <label for="address">Address</label>
+            <input class="checkout__input" type="text" name="address" required>
+            <label for="cc">CC</label>
+            <input class="checkout__input" type="number" name="cc"required>
+            <label for="cardNumber">Card Number</label>
+            <input class="checkout__input" type="number" name="cardNumber" required> 
+
+            <button type="submit">Purchase</button>
+        </form>
+    </main>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+<script src="scripts/firebase.js"></script>
+<script src="scripts/authUtils.js"></script>
+<script src="scripts/checkout.js"></script>
+
+</html>

@@ -1,4 +1,5 @@
 const cartProductList = document.querySelector(".cartProductList")
+const purchaseBtn = document.querySelector(".purchaseBtn")
 let total = 0;
 
 
@@ -59,7 +60,11 @@ showCart =()=>{
 
 }
 
-   
+purchaseBtn.addEventListener("click",()=>{
+
+
+    window.location.href= "checkout.html"
+})
     
 
 

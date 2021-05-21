@@ -19,6 +19,7 @@ const db = firebase.firestore();
 const storage = firebase.storage();
 const auth = firebase.auth();
 const cartCollection = db.collection("cart")
+const orderCollection = db.collection("orders")
 
 logout.forEach(element => {
 
