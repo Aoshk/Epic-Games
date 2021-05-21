@@ -12,6 +12,7 @@ firebase.initializeApp(firebaseConfig);
 
 let activeUser = null
 
+
 const login = document.querySelectorAll(".login");
 const logout = document.querySelectorAll(".logout");
 const db = firebase.firestore();
@@ -29,6 +30,10 @@ let cart = [];
 const cartFromLocalStorage = localStorage.getItem("store__cart")
 const cartNumber = document.querySelector(".cartNumber");
 
+const setLoggedUser = (info) => {
+  activeUser = info
+
+}
 
 auth.onAuthStateChanged(
 
@@ -37,13 +42,17 @@ auth.onAuthStateChanged(
     //hay un usuario logeado
     if (user) {
 
-      activeUser = user;
+      setLoggedUser(user)
+      getCart()
       userLoggedIn()
+      console.log("hay usuario logeado")
 
     }
     else {
 
       userLoggedOut()
+      activeUser = null;
+      cart = []
 
     }
 
@@ -63,9 +72,10 @@ function logOut() {
 
 const addToCart = (product) => {
 
-  cart.push(product)
-
   if (activeUser) {
+
+    cart.push(product)
+
     cartCollection.doc(activeUser.uid).set({
       cart
     })
@@ -78,20 +88,26 @@ const addToCart = (product) => {
   }
 
 }
-
+let showCart =null;
 
 const getCart = () => {
 
-  cartCollection.get().then(snapshots => {
+  if (!activeUser) {
 
-    cartNumber.innerText = snapshots.docs.length
-    snapshots.forEach(element => {
-      const product = element.data();
-      cart.push(product)
+    console.log("no logeado")
+  }
 
+  else {
+    cartCollection.doc(activeUser.uid).get().then(snapshots => {
+
+      const data = snapshots.data()
+      if (!data) return;
+
+      cartNumber.innerText = data.cart.length
+      cart=data.cart
+      if(showCart)  showCart()
     })
+  }
 
-  })
 
 }
-getCart()

@@ -1,6 +1,5 @@
 function userLoggedIn() {
 
-   
     login.forEach(element => {
 
         element.classList.add("hidden")

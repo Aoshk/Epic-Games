@@ -27,6 +27,7 @@ Register = () => {
                     db.collection("users").doc(user.uid).set(user).then(()=>{
 
                         window.location.href="index.html"
+                        setLoggedUser(firebaseauth().currentUser)
                     })
                     
                 }

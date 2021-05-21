@@ -45,11 +45,22 @@ const showList = (querySnapshot) => {
 
         cartBtn.addEventListener("click", () => {
 
-            if (cart.includes(doc.id)) {
+            console.log(data)
+            console.log(cart)
+            console.log(cart.includes(data))
+            let productExist = false;
+
+            cart.forEach(element => {
+                if (element.name==data.name) {
+                    productExist=true;
+                }
+            })
+
+            if (productExist) {
                 alert("You already added this product to your cart")
             }
             else {
-               
+
                 addToCart({
                     ...data,
                     id: doc.id

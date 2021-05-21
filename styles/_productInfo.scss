@@ -5,7 +5,6 @@
         position: relative;
         height: 500px;
         overflow: hidden;
-        // background: url("https://generacionxbox.com/wp-content/uploads/2020/11/Hutman-3.jpg");
         background-position: center top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -93,6 +92,17 @@
         h3{
             margin-left:15px;
             font-size:14px
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .productInfo {
+
+        &__priceContainer {
+
+            display:none;
         }
     }
 }
