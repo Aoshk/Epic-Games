@@ -44,10 +44,7 @@ const showList = (querySnapshot) => {
         const cartBtn = product.querySelector(".product__btnAddToCart");
 
         cartBtn.addEventListener("click", () => {
-
-            console.log(data)
-            console.log(cart)
-            console.log(cart.includes(data))
+            
             let productExist = false;
 
             cart.forEach(element => {
