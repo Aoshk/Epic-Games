@@ -26,7 +26,7 @@ checkoutContainer.addEventListener("submit", function (event) {
 
         cartCollection.doc(activeUser.uid).set({ cart: [] })
 
-        location.href = './store.html';
+        location.href = '/store.html';
     })
 
 })
