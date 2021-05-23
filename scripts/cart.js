@@ -5,7 +5,7 @@ let total = 0;
 
 showCart =()=>{
 
-    
+    console.log("showCart")
     cartProductList.innerHTML =""
     cart.forEach((data)=>{
 
