@@ -7,8 +7,10 @@ btnLogin.addEventListener("click",()=>{
 
     auth.signInWithEmailAndPassword(inputEmail.value,inputPassword.value).then(
         ()=>{
-            //window.location.href="index.html"
+            db.collection("users")
             setLoggedUser(firebase.auth().currentUser)
+            window.location.href="index.html"
+           
         }
     ).catch((error)=>{
 

@@ -43,10 +43,14 @@ closeMenu.addEventListener("click", ()=>{
 
 let cart = [];
 const cartFromLocalStorage = localStorage.getItem("store__cart")
-
+let checkForAdmin = null
 
 const setLoggedUser = (info) => {
   activeUser = info
+
+  if(checkForAdmin) checkForAdmin()
+
+
 }
 
 auth.onAuthStateChanged(
@@ -56,17 +60,25 @@ auth.onAuthStateChanged(
     //hay un usuario logeado
     if (user) {
 
-      setLoggedUser(user)
-      getCart()
-      userLoggedIn()
-      console.log("hay usuario logeado")
+      db.collection("users").doc(user.uid).get().then((doc)=>{
 
+        
+        setLoggedUser(doc.data())
+        getCart()
+        userLoggedIn()
+        console.log("hay usuario logeado")
+  
+
+      })
+
+     
     }
     else {
 
       userLoggedOut()
       activeUser = null;
       cart = []
+      if(checkForAdmin) checkForAdmin() 
 
     }
 
@@ -89,6 +101,7 @@ const addToCart = (product) => {
   if (activeUser) {
 
     cart.push(product)
+    console.log(activeUser)
 
     cartCollection.doc(activeUser.uid).set({
       cart

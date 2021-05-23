@@ -3,6 +3,15 @@ const divImages = document.querySelector(".productFormImageContainer")
 
 const imageFiles = [];
 
+
+checkForAdmin=()=>{
+
+    if(activeUser==null||activeUser.admin==false){
+
+        window.location.href= "./store.html"
+    }
+}
+
 //actualiza la vista previa de la imagen
 productForm.image.addEventListener("change", () => {
 

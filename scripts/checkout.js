@@ -17,7 +17,7 @@ checkoutContainer.addEventListener("submit", function (event) {
         name: checkoutForm.name.value,
         address: checkoutForm.address.value,
         cardNumber: checkoutForm.cardNumber.value,
-        userId: activeUser.uid,
+        uid: activeUser.uid,
         ids: productsId
 
     }

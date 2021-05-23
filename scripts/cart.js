@@ -7,7 +7,6 @@ let total = 0;
 
 showCart =()=>{
 
-    
     cartProductList.innerHTML =""
     cart.forEach((data)=>{
 

@@ -3,8 +3,6 @@ const inputEmail = document.querySelector(".inputEmail")
 const inputPassword = document.querySelector(".inputPassword")
 const inputPassword2 = document.querySelector(".inputRepeatPassword")
 const btnRegister = document.querySelector(".btnRegister")
-//const btnLogin=document.querySelector("btnLogin")
-
 
 Register = () => {
 
@@ -18,9 +16,9 @@ Register = () => {
             auth.createUserWithEmailAndPassword(inputEmail.value, inputPassword.value).then(
 
                 (data) => {
-
+                    console.log(data)
                     let user = {
-                        id: data.user.uid,
+                        uid: data.user.uid,
                         name: inputName.value,
                         email: inputEmail.value
                     }
@@ -52,8 +50,3 @@ Register = () => {
 
 
 btnRegister.addEventListener("click", Register);
-// btnLogin.addEventListener("click",()=>{
-
-//     window.location.href="login.html"
-
-// })
