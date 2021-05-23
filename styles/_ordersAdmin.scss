@@ -1,0 +1,29 @@
+.ordersContainer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .order{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color:black;
+        padding: 1em;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        width: 60%;
+
+        h2{
+
+            width:300px;
+        }
+
+        .cartProduct{
+
+            width:100%;
+           
+        }
+    }
+}

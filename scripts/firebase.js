@@ -19,6 +19,7 @@ const cartNumber = document.querySelectorAll(".cartNumber");
 const db = firebase.firestore();
 const storage = firebase.storage();
 const auth = firebase.auth();
+const productCollection=db.collection("products")
 const cartCollection = db.collection("cart")
 const orderCollection = db.collection("orders")
 const botonMenu = document.querySelector(".imgMenuMobile");
@@ -52,6 +53,18 @@ const setLoggedUser = (info) => {
 
 
 }
+
+checkForAdmin = () => {
+
+  if (activeUser == null || activeUser.admin == false) {
+
+      return false;
+  } else {
+
+      return true;
+  }
+}
+
 
 auth.onAuthStateChanged(
 

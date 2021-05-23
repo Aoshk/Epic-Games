@@ -4,114 +4,109 @@ const divImages = document.querySelector(".productFormImageContainer")
 const imageFiles = [];
 
 
-checkForAdmin=()=>{
 
-    if(activeUser==null||activeUser.admin==false){
+if (checkForAdmin) {
 
-        window.location.href= "./store.html"
-    }
-}
-
-//actualiza la vista previa de la imagen
-productForm.image.addEventListener("change", () => {
+    //actualiza la vista previa de la imagen
+    productForm.image.addEventListener("change", () => {
 
 
-    const file = productForm.image.files[0]
-    if (!file) return;
-    var reader = new FileReader();
+        const file = productForm.image.files[0]
+        if (!file) return;
+        var reader = new FileReader();
 
-    reader.onload = function (e) {
-        const productImg = document.createElement("img");
-        productImg.classList.add("productFormImg")
-        productImg.setAttribute("src", e.target.result);
-        divImages.appendChild(productImg);
-    }
+        reader.onload = function (e) {
+            const productImg = document.createElement("img");
+            productImg.classList.add("productFormImg")
+            productImg.setAttribute("src", e.target.result);
+            divImages.appendChild(productImg);
+        }
 
-    reader.readAsDataURL(file);
-    imageFiles.push(file);
+        reader.readAsDataURL(file);
+        imageFiles.push(file);
 
-});
-
-
-//evento de subir el producto
-productForm.addEventListener("submit", (event) => {
-
-    event.preventDefault();
-
-    const product = {
-        name: productForm.name.value,
-        price: parseFloat(productForm.price.value),
-        genre: productForm.genre.value,
-        rating:productForm.rating.value,
-        description: productForm.description.value,
-        metacritic: productForm.metacritic.value,
-        createdAt: Date.now()
-    }
-
-    db.collection("products").add(product).then(function (docref) {
-
-        const uploadPromises = [];
-        const downloadURLPromises = [];
+    });
 
 
-        //recorre arreglo de imagenes y las sube
-        imageFiles.forEach(function (file) {
+    //evento de subir el producto
+    productForm.addEventListener("submit", (event) => {
 
-            let storageRef = firebase.storage().ref();
-            let fileRef = storageRef.child(`products/${docref.id}/${file.name}`);
+        event.preventDefault();
 
-            uploadPromises.push(fileRef.put(file))
+        const product = {
+            name: productForm.name.value,
+            price: parseFloat(productForm.price.value),
+            genre: productForm.genre.value,
+            rating: productForm.rating.value,
+            description: productForm.description.value,
+            metacritic: productForm.metacritic.value,
+            createdAt: Date.now()
+        }
 
-        })
+        db.collection("products").add(product).then(function (docref) {
 
-        //espera  a que se suba todas las imagenes y obtiene url 
-        Promise.all(uploadPromises).then(function (snapshots) {
+            const uploadPromises = [];
+            const downloadURLPromises = [];
 
-            snapshots.forEach(function (snapshot) {
 
-                downloadURLPromises.push(snapshot.ref.getDownloadURL())
+            //recorre arreglo de imagenes y las sube
+            imageFiles.forEach(function (file) {
 
-            });
+                let storageRef = firebase.storage().ref();
+                let fileRef = storageRef.child(`products/${docref.id}/${file.name}`);
 
-            Promise.all(downloadURLPromises).then(function (dowloadURL) {
-                const images= []
+                uploadPromises.push(fileRef.put(file))
 
-                dowloadURL.forEach(function (url,index){
-
-                    images.push({
-
-                        url:url,
-                        ref:snapshots[index].ref.fullPath
-                    });
-
-                })
-
-                db.collection("products").doc(docref.id).update({
-
-                    images:images
-                }).then(function (){
-
-                    alert("producto subido satisfactoriamente")
-                })
-
-                
             })
 
+            //espera  a que se suba todas las imagenes y obtiene url 
+            Promise.all(uploadPromises).then(function (snapshots) {
+
+                snapshots.forEach(function (snapshot) {
+
+                    downloadURLPromises.push(snapshot.ref.getDownloadURL())
+
+                });
+
+                Promise.all(downloadURLPromises).then(function (dowloadURL) {
+                    const images = []
+
+                    dowloadURL.forEach(function (url, index) {
+
+                        images.push({
+
+                            url: url,
+                            ref: snapshots[index].ref.fullPath
+                        });
+
+                    })
+
+                    db.collection("products").doc(docref.id).update({
+
+                        images: images
+                    }).then(function () {
+
+                        alert("producto subido satisfactoriamente")
+                    })
+
+
+                })
+
+            })
+        }).catch(function (error) {
+
+
+            console.log(error)
         })
-    }).catch(function (error){
 
 
-        console.log(error)
-    })
+    });
 
 
-    
-
-
-
-
-
-});
+}
+else {
+    location.href = '/store.html';
+}
 
 
 
