@@ -61,13 +61,7 @@ db.collection("products").doc(id)
             }
             else {
 
-                cart.push(data)
-                localStorage.setItem("store__cart", JSON.stringify(cart))
-
-                cartNumber.forEach(number => {
-
-                    number.innerText = cart.length
-                })
+                addToCart(data)
             }
 
 
