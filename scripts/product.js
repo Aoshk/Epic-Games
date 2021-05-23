@@ -63,7 +63,11 @@ db.collection("products").doc(id)
 
                 cart.push(data)
                 localStorage.setItem("store__cart", JSON.stringify(cart))
-                cartNumber.innerText = cart.length
+
+                cartNumber.forEach(number => {
+
+                    number.innerText = cart.length
+                })
             }
 
 
@@ -82,12 +86,12 @@ function createSuggestedOffers() {
             console.log(datos)
             const product = document.createElement("div");
             let img = datos.images[0]?.url;
-    
+
             if (!img) {
-    
+
                 img = "./data/placeHolder.png";
             }
-    
+
             product.innerHTML = ` 
         <a href ="./product.html?id=${doc.id}&=${datos.name}">
         <div class="image__container">
@@ -112,29 +116,33 @@ function createSuggestedOffers() {
        </div>
        
         `
-    
+
             product.classList.add("product");
             suggestedOffers.appendChild(product);
             const cartBtn = product.querySelector(".product__btnAddToCart");
-    
+
             cartBtn.addEventListener("click", () => {
-    
+
                 if (cart.includes(currentProduct)) {
                     alert("You already added this product to your cart")
                 }
                 else {
-    
+
                     cart.push(currentProduct)
                     localStorage.setItem("store__cart", JSON.stringify(cart))
-                    cartNumber.innerText = cart.length
+                    
+                    cartNumber.forEach(number => {
+
+                        number.innerText = cart.length
+                    })
                 }
-    
-    
-    
+
+
+
             })
         })
-            
-        
+
+
     })
 
 }

@@ -1,5 +1,7 @@
 const cartProductList = document.querySelector(".cartProductList")
 const purchaseBtn = document.querySelector(".purchaseBtn")
+const totalValue = document.querySelector(".totalValue")
+const totalItems = document.querySelector(".totalItems")
 let total = 0;
 
 
@@ -57,7 +59,8 @@ showCart =()=>{
     
     })
     
-
+    totalValue.innerText ="$ "+ total
+    totalItems.innerText = cart.length
 }
 
 purchaseBtn.addEventListener("click",()=>{

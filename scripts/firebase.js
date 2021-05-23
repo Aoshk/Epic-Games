@@ -15,11 +15,15 @@ let activeUser = null
 
 const login = document.querySelectorAll(".login");
 const logout = document.querySelectorAll(".logout");
+const cartNumber = document.querySelectorAll(".cartNumber");
 const db = firebase.firestore();
 const storage = firebase.storage();
 const auth = firebase.auth();
 const cartCollection = db.collection("cart")
 const orderCollection = db.collection("orders")
+const botonMenu = document.querySelector(".imgMenuMobile");
+const menuMobile = document.querySelector(".divMenuMobile");
+const closeMenu = document.querySelector(".closeMenu");
 
 logout.forEach(element => {
 
@@ -27,13 +31,22 @@ logout.forEach(element => {
 
 })
 
+botonMenu.addEventListener("click", ()=>{
+
+  menuMobile.style.display = "block"
+});
+
+closeMenu.addEventListener("click", ()=>{
+
+  menuMobile.style.display = "none"
+})
+
 let cart = [];
 const cartFromLocalStorage = localStorage.getItem("store__cart")
-const cartNumber = document.querySelector(".cartNumber");
+
 
 const setLoggedUser = (info) => {
   activeUser = info
-
 }
 
 auth.onAuthStateChanged(
@@ -80,7 +93,12 @@ const addToCart = (product) => {
     cartCollection.doc(activeUser.uid).set({
       cart
     })
-    cartNumber.innerText = cart.length
+    
+    cartNumber.forEach(number=>{
+
+      number.innerText = cart.length
+    })
+    
   }
 
   else {
@@ -104,8 +122,13 @@ const getCart = () => {
       const data = snapshots.data()
       if (!data) return;
 
-      cartNumber.innerText = data.cart.length
+      
       cart=data.cart
+      cartNumber.forEach(number=>{
+
+        number.innerText = cart.length
+        
+      })
       if(showCart)  showCart()
     })
   }

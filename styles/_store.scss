@@ -3,8 +3,9 @@
     display:flex;
     flex-wrap: wrap;
     padding: 0.5em;
-    justify-content: flex-start;
-    margin:1em
+    justify-content: center;
+    margin:1em;
+    
 }
 
 .filter{
@@ -31,4 +32,19 @@
         
     }
    
+}
+
+@media (max-width: 768px) {
+
+    .list{
+
+        flex-direction: column;
+        padding: unset;
+    }
+    .filter{
+
+        flex-wrap: wrap;
+        width:unset;
+       justify-content: flex-start;
+    }
 }
