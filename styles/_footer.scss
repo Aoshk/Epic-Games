@@ -1,8 +1,10 @@
 footer {
     width: 100%;
     display: flex;
+    position: absolute;
     background-color: black;
     justify-content: space-evenly;
+    
     padding: 10px;
     flex-wrap: wrap;
 

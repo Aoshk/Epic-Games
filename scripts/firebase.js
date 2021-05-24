@@ -79,7 +79,7 @@ auth.onAuthStateChanged(
         setLoggedUser(doc.data())
         getCart()
         userLoggedIn()
-        console.log("hay usuario logeado")
+        
   
 
       })
@@ -114,7 +114,7 @@ const addToCart = (product) => {
   if (activeUser) {
 
     cart.push(product)
-    console.log(activeUser)
+    
 
     cartCollection.doc(activeUser.uid).set({
       cart

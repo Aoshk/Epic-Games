@@ -23,7 +23,7 @@ db.collection("products").doc(id)
 
         const data = doc.data()
         currentProduct = data;
-        console.log(currentProduct)
+        
         createSuggestedOffers()
         let img0 = data.images[0]?.url;
 
@@ -77,7 +77,6 @@ function createSuggestedOffers() {
         querySnapshot.forEach((doc) => {
 
             const datos = doc.data();
-            console.log(datos)
             const product = document.createElement("div");
             let img = datos.images[0]?.url;
 

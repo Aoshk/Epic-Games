@@ -5,6 +5,7 @@
     padding: 0.5em;
     justify-content: center;
     margin:1em;
+    min-height: 100vh;
     
 }
 
@@ -39,7 +40,9 @@
     .list{
 
         flex-direction: column;
+        align-items:center;
         padding: unset;
+        flex-wrap: nowrap;
     }
     .filter{
 

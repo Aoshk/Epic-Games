@@ -16,7 +16,7 @@ Register = () => {
             auth.createUserWithEmailAndPassword(inputEmail.value, inputPassword.value).then(
 
                 (data) => {
-                    console.log(data)
+                    
                     let user = {
                         uid: data.user.uid,
                         name: inputName.value,

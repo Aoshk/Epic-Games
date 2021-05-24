@@ -11,7 +11,7 @@ else {
 
         snapshot.forEach((doc) => {
 
-            console.log(doc.data())
+            
             const order = document.createElement("div");
             order.innerHTML=`
             

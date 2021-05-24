@@ -37,7 +37,7 @@ showCart =()=>{
 
       
         removeProduct.addEventListener("click",()=>{
-            console.log(cart)
+           
 
             cart.forEach(element=>{
 

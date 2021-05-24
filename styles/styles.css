@@ -25,6 +25,7 @@ body {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  min-height: 100vh;
   padding: 0px;
   margin: 0px;
   background-color: #1b1924;
@@ -221,11 +222,10 @@ p {
 
 @media (max-width: 768px) {
   .cartProductList {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .cartContainer {
     width: 100vw;
-    height: 100vh;
     margin-bottom: 100px;
   }
   .summaryContainer {
@@ -394,6 +394,8 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .suggestedOffers__list .product {
@@ -402,7 +404,7 @@ p {
 
 .product {
   background-color: black;
-  width: 300px;
+  width: 25%;
   margin: 10px;
   text-decoration: none;
 }
@@ -460,6 +462,12 @@ p {
   width: 50px;
   height: 30px;
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: 100%;
+  }
 }
 
 .productForm {
@@ -701,6 +709,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1em;
+  min-height: 100vh;
 }
 
 .filter {
@@ -739,7 +748,12 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: unset;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .filter {
     -ms-flex-wrap: wrap;
@@ -1263,6 +1277,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
   background-color: black;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;

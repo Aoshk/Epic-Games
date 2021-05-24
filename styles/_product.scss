@@ -4,6 +4,7 @@
     display:flex;
     flex-wrap: wrap;
     padding: 20px;
+    justify-content:space-around;
     
     .product{
 
@@ -13,7 +14,7 @@
 .product {
 
     background-color:black;
-    width:300px;
+    width:25%;
     margin: 10px;
     text-decoration: none;
 
@@ -62,3 +63,10 @@
     }
 }
 
+@media (max-width: 768px) {
+
+    .product {
+
+        width:100%;
+    }  
+}
