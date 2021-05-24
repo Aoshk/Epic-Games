@@ -466,7 +466,7 @@ p {
 
 @media (max-width: 768px) {
   .product {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -709,7 +709,6 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1em;
-  min-height: 100vh;
 }
 
 .filter {
